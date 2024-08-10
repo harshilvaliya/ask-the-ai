@@ -1,8 +1,9 @@
 "use client"; // Indicates that this component is a client-side component
 
 import { Button, Textarea } from "@nextui-org/react"; // Import UI components from NextUI
-import { Send } from "lucide-react"; // Import the Send icon from Lucide React
+import { Home, Send } from "lucide-react"; // Import the Home and Send icons from Lucide React
 import { type useChat } from "ai/react"; // Import types for the useChat hook
+import Link from "next/link"; // Import the Link component from Next.js
 
 // Type aliases for function types from useChat
 type HandleInputChange = ReturnType<typeof useChat>["handleInputChange"];
@@ -52,13 +53,23 @@ export const ChatInput = ({
                 className="resize-none bg-zinc-800 hover:bg-zinc-900 rounded-xl text-base"
               />
 
-              <Button
-                size="sm"
-                type="submit"
-                className="absolute z-10 border border-border bg-zinc-900 right-2 bottom-2"
-              >
-                <Send className="size-4" />
-              </Button>
+              <div className="absolute z-10 right-2 bottom-2 flex gap-2">
+                <Link href="/" className="flex items-center">
+                  <Button
+                    size="sm"
+                    className="border border-border bg-zinc-900"
+                  >
+                    <Home className="size-4" />
+                  </Button>
+                </Link>
+                <Button
+                  size="sm"
+                  type="submit"
+                  className="border border-border bg-zinc-900"
+                >
+                  <Send className="size-4" />
+                </Button>
+              </div>
             </form>
           </div>
         </div>
