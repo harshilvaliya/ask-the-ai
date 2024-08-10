@@ -22,13 +22,12 @@ export default function Home() {
           Enter a URL to start a chat with the website.
         </p>
         <Input
-          clearable
-          bordered
+          isClearable // Use `clearable` instead of `isClearable`
           fullWidth
           placeholder="Enter URL"
           value={url}
           onChange={(e) => setUrl(e.target.value)}
-          className="mb-2"
+          className="mb-2 border border-gray-300 rounded-md" // Apply custom border styling
         />
         <Button
           onClick={handleSubmit}
