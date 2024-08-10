@@ -2,7 +2,6 @@
 import { useState } from "react";
 import { useRouter } from "next/navigation";
 import { Button, Input } from "@nextui-org/react";
-import { GitHub } from "lucide-react"; // Import GitHub icon
 import { FaGithubSquare } from "react-icons/fa";
 
 export default function Home() {
@@ -18,9 +17,7 @@ export default function Home() {
   return (
     <div className="flex flex-col items-center justify-center min-h-screen bg-zinc-700 p-4 relative">
       <div className="text-center mb-4">
-        <h1 className="text-4xl font-bold mb-2 text-white">
-          Chat w/Web
-        </h1>
+        <h1 className="text-4xl font-bold mb-2 text-white">Chat w/Web</h1>
         <p className="text-lg mb-4 text-muted-foreground">
           Enter a URL to start a chat with the website.
         </p>
